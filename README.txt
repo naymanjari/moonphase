@@ -1,7 +1,7 @@
 this project currently has no moving parts
 this is just setting up the sketch to read my csv file
 eventually will have an "earth" that moves across the "moon" to simulate phases based on the "phase" variable
-
+will change phase every second based on the IRL clock using second()
 
 running a p5 app:
 

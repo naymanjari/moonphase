@@ -1,10 +1,8 @@
 let table;
 
 function preload(){
-  table = loadTable('test.csv', 'csv', 'header');
+  table = loadTable('Delhi_Az_Eclipse.csv', 'csv', 'header');
 }
-
-//var day = table.getColumn(0);
 
 function setup() {
   print(table.getRowCount() + ' total rows in table');
@@ -17,13 +15,9 @@ function setup() {
 
 
   for (let r = 0; r < table.getRowCount(); r++) {
-    //for (let day = table.getColumn(0)) {
-    //for (let c = 0; c < table.getColumnCount(); c++) {
   
     print('row ' + r + ' has the date ' + table.get(r, day));
     print('row ' + r + ' has the phase ' + table.get(r, phase));
-    
-  
       
     }
 
@@ -34,7 +28,11 @@ function setup() {
 
 function draw() {
   fill(200);
-  ellipse(width/2, height/2, width/2, height/2);
+  ellipse(width/2, height/2, width/3, height/3);
+  for (var a = -200; a < 800; a = a + 2.266) {  
+    fill(244);
+    ellipse(a, -0.0025 * ((a-400)*(a-400)) + 400, width/3, height/3);
+  }
 }
 
 //function draw() {
