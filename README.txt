@@ -1,7 +1,4 @@
-this project currently has no moving parts
-this is just setting up the sketch to read my csv file
-eventually will have an "earth" that moves across the "moon" to simulate phases based on the "phase" variable
-will change phase every second based on the IRL clock using second()
+this project uses real moon phase data from Delhi, India from 1901-1902 BCE and visualizes it from the perspective of the sun where the Earth creates a shadow over the moon.
 
 running a p5 app:
 
