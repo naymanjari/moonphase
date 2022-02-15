@@ -17,8 +17,6 @@ function preload(){
 function setup() {
   print(table.getRowCount() + ' total rows in table');
   print(table.getColumnCount() + ' total columns in table');
-  //'name' does not work to get header information
-  //print(table.getColumn('name'));
   rows = table.getRow();
   rowCount = table.getRowCount();
 
@@ -32,7 +30,6 @@ function setup() {
 
 
   createCanvas(800, 800);
-  //frameRate(1);
 }
 
 function draw() {
@@ -43,7 +40,6 @@ function draw() {
       timer++;
       path = table.get(timer, phase);
       counted = true;
-      //path = path + 2.66;
       if (table.get(timer, 6) == 1) { //6 is NewMoon
         waxing = true;
         waning = false;
@@ -68,8 +64,6 @@ function draw() {
     timer = 0;
   }
 
-  //print(timer);
-  //frameRate(1); //not working???
   fill(200);
   ellipse(width/2, height/2, width/3, height/3);
   for (var i = 0; i < timer; i++) { //2.66 is the 800/r  
@@ -77,19 +71,3 @@ function draw() {
     ellipse(path, 0.0025 * ((path-400)*(path-400)) + 400, width/3, height/3);
   }
 }
-
-
-
-//function draw() {
-  //moon(30);
-//}
-
-//function moon(phase){ //phase must be between 0 and 30
- // if (phase <= 15){
- //   phase = map(phase, 0, 15, 0, 300);
- // }else{
- //   phase = map(phase, 15, 30, 300, 0);
- // }
-  
-//  ellipse(width/2, height/2, phase, phase);
-//}
